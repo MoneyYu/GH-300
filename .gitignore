@@ -32,3 +32,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 .terraform.lock.hcl
+
+# Local Microsoft course slide decks
+PPT/
