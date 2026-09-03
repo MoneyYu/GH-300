@@ -35,3 +35,11 @@ terraform.rc
 
 # Local Microsoft course slide decks
 PPT/
+
+# Generated teaching-snapshot outputs and local Python environments
+**/bin/
+**/obj/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+DEMO.zip
