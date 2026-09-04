@@ -5,7 +5,7 @@ GA: G-DXYJBX6BH8
 ---
 
 # GH-300 Reference
-以 GitHub Copilot 強化軟體開發流程：從負責任地使用 AI、有效設計提示，到運用 Chat、agents、MCP、程式碼審查與組織治理機制。
+This course explores the use of AI in the context of GitHub Copilot, a generative AI tool for developers. It equips users with the knowledge and skills to use Copilot effectively while mitigating potential ethical and operational risks associated with AI usage.
 
 ## Course
 :::success
@@ -23,18 +23,6 @@ Post Course Survey: [https://aka.ms/gh300survey](https://aka.ms/gh300survey)
 [Course GH-300 简体中文版本](https://learn.microsoft.com/zh-cn/training/courses/gh-300t00)
 
 [Course GH-300 正體中文版本](https://learn.microsoft.com/zh-tw/training/courses/gh-300t00)
-
-[GitHub Copilot Fundamentals Part 1 of 2 - English](https://learn.microsoft.com/en-us/training/paths/copilot/)
-
-[GitHub Copilot Fundamentals Part 1 of 2 - 简体中文](https://learn.microsoft.com/zh-cn/training/paths/copilot/)
-
-[GitHub Copilot Fundamentals Part 1 of 2 - 正體中文](https://learn.microsoft.com/zh-tw/training/paths/copilot/)
-
-[GitHub Copilot Fundamentals Part 2 of 2 - English](https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/)
-
-[GitHub Copilot Fundamentals Part 2 of 2 - 简体中文](https://learn.microsoft.com/zh-cn/training/paths/gh-copilot-2/)
-
-[GitHub Copilot Fundamentals Part 2 of 2 - 正體中文](https://learn.microsoft.com/zh-tw/training/paths/gh-copilot-2/)
 
 ## Infos
 [Learner Experience Portal](https://esi.microsoft.com/)
@@ -177,8 +165,6 @@ Training key:
 [GitHub: MoneyDemo](https://github.com/MoneyDemo)
 
 ## Exam
-Skills measured as of **2026-08-07**.
-
 [GH-300 Exam Page](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/?practice-assessment-type=certification)
 
 [Practice Assessment](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/practice/assessment?assessment-type=practice&assessmentId=218035372&practice-assessment-type=certification)
@@ -253,7 +239,5 @@ SVG: [exam.svg](https://mttcontent.yu.money/common/exam.svg)
 
 ## Contact
 - Money Yu
-
-- Mail: [Money.Yu@microsoft.com](mailto:Money.Yu@microsoft.com)
-
-- LinkedIn: `@abc12207`
+  - Mail: [Money.Yu@microsoft.com](mailto:Money.Yu@microsoft.com)
+  - LinkedIn: [@abc12207](https://linkedin.com/in/abc12207)
