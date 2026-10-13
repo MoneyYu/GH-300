@@ -1,5 +1,13 @@
 
 # Agent Demo
+## 版本範圍檢查器（Version Compatibility）
+### GH-300 主線：Completion → 修 BUG → refactor → 測試 → Context7 → 網頁 → 瀏覽器驗證 → Skill
+- 位置：`DEMO\VersionCompatibility\`
+- 完整 Prompt：[`VersionCompatibility\PROMPTS.md`](VersionCompatibility/PROMPTS.md)（JavaScript 主線 P00–P11、語言中立 L00–L10）；入口索引見 [`PROMPT.md`](PROMPT.md)
+- 講師逐段腳本、快照恢復點（`stages\00-starter` … `stages\05-web`）、備案：[`VersionCompatibility\RUNBOOK.md`](VersionCompatibility/RUNBOOK.md)
+- 專案規則、環境、命令與限制：[`VersionCompatibility\README.md`](VersionCompatibility/README.md)
+- 只判定版本範圍，不保證 API 相容或升級安全；Context7／Playwright MCP 與 Skill 的實際載入須課前實測，失敗時依 RUNBOOK 的備案如實標示。
+
 ## 訂閱管理系統
 ### 20250303
 ``` markdown

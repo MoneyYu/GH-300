@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>版本範圍檢查</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>版本範圍檢查</h1>
+      <p class="note">只判定版本是否落在範圍內，不保證實際 API 相容或升級安全。</p>
+    </header>
+
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">輸入版本與範圍</h2>
+      <form id="check-form" novalidate>
+        <div class="field">
+          <label for="version">版本 version</label>
+          <input id="version" name="version" type="text" class="mono" autocomplete="off" spellcheck="false" placeholder="例如 1.10.0">
+        </div>
+        <div class="field">
+          <label for="range">範圍 range</label>
+          <input id="range" name="range" type="text" class="mono" autocomplete="off" spellcheck="false" placeholder="例如 &gt;=1.9.0、^1.2.3、~1.2.3">
+        </div>
+        <button id="check" type="submit" class="primary">檢查</button>
+      </form>
+
+      <div class="examples" role="group" aria-label="範例">
+        <span class="examples-title">範例</span>
+        <button type="button" class="example" data-version="1.10.0" data-range="&gt;=1.9.0">1.10.0 &gt;=1.9.0</button>
+        <button type="button" class="example" data-version="1.3.0" data-range="^1.2.3">caret：1.3.0 ^1.2.3</button>
+        <button type="button" class="example" data-version="1.3.0" data-range="~1.2.3">tilde：1.3.0 ~1.2.3</button>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="result-title">
+      <h2 id="result-title">結果</h2>
+      <div id="result" class="outcome" aria-live="polite" aria-atomic="true" data-state="idle">尚未檢查。</div>
+      <div id="error" class="outcome" role="alert" aria-atomic="true" data-state="none" hidden></div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

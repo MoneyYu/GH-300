@@ -43,3 +43,4 @@ PPT/
 **/__pycache__/
 **/.pytest_cache/
 DEMO.zip
+.worktrees/
