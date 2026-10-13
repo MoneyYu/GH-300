@@ -1,0 +1,9 @@
+{
+  "name": "version-compatibility-demo-00-starter",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "demo": "node src/cli.js"
+  }
+}

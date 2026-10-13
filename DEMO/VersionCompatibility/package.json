@@ -1,0 +1,19 @@
+{
+  "name": "version-compatibility-demo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "demo": "node src/cli.js",
+    "start": "node src/server.js",
+    "test": "node --test tests/core.test.js tests/semver-allowlist.test.js tests/cli.test.js tests/server.test.js",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "semver": "7.8.5"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "0.0.83",
+    "@playwright/test": "1.63.0"
+  }
+}
