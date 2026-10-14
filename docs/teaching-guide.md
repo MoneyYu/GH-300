@@ -217,6 +217,7 @@
 - [ ] 以當日 [plans](https://docs.github.com/en/copilot/get-started/plans) 與
   [Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300) 檢查產品名稱、範圍與考試比重。
 - [ ] 選定 M3 的 JavaScript 或 Python 主線；備好 M4 PrimeService 的最小測試示範。
+- [ ] 若採 Equipment Lending 主線，依 [`demo-environment.md`](demo-environment.md) 的連結排練該專案；將真實瀏覽器 runner、Context7 MCP、Playwright MCP、Skill 載入與 Inline Completion 分開記錄，不以其中一項推論其他項目通過。
 - [ ] 不修改 `DEMO\SampleApps\` 的教學快照；若範例失敗，先確認是否為刻意教學情境。
 
 ## 講師小技巧

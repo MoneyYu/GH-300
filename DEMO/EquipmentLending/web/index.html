@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="在本機練習查看、借用與歸還團隊設備。" />
+    <title>團隊設備借用</title>
+    <script nonce="__CSP_NONCE__">
+      (() => {
+        const param = new URLSearchParams(window.location.search).get("scoutTheme");
+        const theme =
+          param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div id="app" aria-live="off">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">GH-300 · 本機課堂模擬</p>
+          <h1>團隊設備借用</h1>
+          <p class="intro">查看設備狀態、記錄借還，並保留完整借用歷史。</p>
+        </div>
+        <div class="header-actions">
+          <p class="timezone-line">顯示時區：<strong id="time-zone">正在讀取…</strong></p>
+          <button class="button button-secondary" id="refresh-button" type="button">重新整理</button>
+        </div>
+      </header>
+
+      <main>
+        <p class="notice">
+          這是本機課堂模擬，沒有身分驗證；請只使用 DEMO-A、DEMO-B 等虛構代號，不輸入真實個資。
+        </p>
+
+        <section aria-labelledby="summary-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">設備概況</p>
+              <h2 id="summary-heading">目前狀態</h2>
+            </div>
+            <p class="updated-at" id="updated-at">尚未載入資料</p>
+          </div>
+          <div class="summary-grid" id="summary"></div>
+        </section>
+
+        <section aria-labelledby="equipment-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">可借設備與進行中的借用</p>
+              <h2 id="equipment-heading">設備清單</h2>
+            </div>
+            <label class="filter-control" for="status-filter">
+              顯示狀態
+              <select id="status-filter">
+                <option value="all">全部設備</option>
+                <option value="available">可借</option>
+                <option value="borrowed">借用中</option>
+                <option value="overdue">逾期</option>
+              </select>
+            </label>
+          </div>
+          <p class="message" id="operation-message" role="status" aria-live="polite"></p>
+          <div class="equipment-grid" id="equipment-list"></div>
+        </section>
+
+        <section aria-labelledby="history-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">只讀紀錄</p>
+              <h2 id="history-heading">借用歷史</h2>
+            </div>
+            <p class="history-count" id="history-count">0 筆已歸還</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">設備</th>
+                  <th scope="col">借用人代號</th>
+                  <th scope="col">借出時間</th>
+                  <th scope="col">到期時間</th>
+                  <th scope="col">歸還時間</th>
+                </tr>
+              </thead>
+              <tbody id="history-list"></tbody>
+            </table>
+          </div>
+          <p class="empty-state" id="history-empty">目前沒有已歸還的借用紀錄。</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>期限以伺服器的 UTC 瞬間計算；這裡只依瀏覽器時區格式化顯示。</p>
+      </footer>
+    </div>
+  </body>
+</html>

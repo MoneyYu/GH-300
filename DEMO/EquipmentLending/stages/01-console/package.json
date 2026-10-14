@@ -1,0 +1,6 @@
+{
+  "name": "equipment-lending-01-console",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/scenario.test.js" }
+}

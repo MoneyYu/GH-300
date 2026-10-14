@@ -1,0 +1,8 @@
+{
+  "name": "equipment-lending-06-sqlite",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.js tests/time.test.js tests/service.test.js tests/cli.test.js"
+  }
+}
