@@ -1,0 +1,17 @@
+{
+  "dueAtBoundary": {
+    "borrowedAt": "2026-01-15T00:00:00.000Z",
+    "days": 7,
+    "dueAt": "2026-01-22T00:00:00.000Z",
+    "beforeDueAt": "2026-01-21T23:59:59.999Z",
+    "atDueAt": "2026-01-22T00:00:00.000Z"
+  },
+  "daylightSaving": {
+    "borrowedAt": "2026-03-08T09:30:00.000Z",
+    "oneDayLater": "2026-03-09T09:30:00.000Z",
+    "losAngelesBefore": "08/03/2026, 01:30 GMT-08:00",
+    "losAngelesAfter": "09/03/2026, 02:30 GMT-07:00",
+    "taipeiBefore": "08/03/2026, 17:30 GMT+08:00",
+    "taipeiAfter": "09/03/2026, 17:30 GMT+08:00"
+  }
+}

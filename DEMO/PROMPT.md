@@ -1,19 +1,20 @@
-# Version Compatibility Prompt（版本範圍檢查器）
-完整可複製的 Prompt 在 [`VersionCompatibility\PROMPTS.md`](VersionCompatibility/PROMPTS.md)，此處只列入口，不複製內容。
+# Equipment Lending Prompt（團隊設備借用）
+GH-300 新主線使用有狀態的設備借用系統；完整可複製的 JavaScript 與語言中立 Prompt 在 [`EquipmentLending\PROMPTS.md`](EquipmentLending/PROMPTS.md)。
 
 | 階段 | JavaScript 主線 | 語言中立 |
 |---|---|---|
-| 環境檢查與起始專案 | P00-Preflight、P00 | L00 |
-| Code Completion／教學 BUG／修 BUG | P01、P01B、P02 | L01、L01B、L02 |
-| refactor／單元測試 | P03、P04 | L03、L04 |
-| Context7 查詢／semver 接替 | P05-Setup、P05、P06 | L05、L06 |
-| HTTP API／網站／瀏覽器驗證 | P07、P08、P09-Setup、P09 | L07、L08、L09-Setup、L09 |
-| Skill | P10 | L10 |
-| 講師課前快照與腳本 | P11 | — |
+| 環境檢查與需求 | P00-Preflight、P00 | L00 |
+| Inline Completion／故障注入／Agent 修復 | P01、P01B、P02 | L01、L01B、L02 |
+| refactor／回歸測試／時區 | P03、P04 | L03、L04 |
+| Context7 文件查詢／SQLite | P05-Setup、P05、P06 | L05、L06 |
+| HTTP API／原生網頁／瀏覽器驗收 | P07、P08、P09-Setup、P09 | L07、L08、L09 |
+| Read-only Skill／講師準備 | P10、P11 | L10 |
 
-- 專案規則、環境與命令：[`VersionCompatibility\README.md`](VersionCompatibility/README.md)
-- 講師逐段腳本、快照恢復點與備案：[`VersionCompatibility\RUNBOOK.md`](VersionCompatibility/RUNBOOK.md)
-- 只判定版本範圍，不保證 API 相容或升級安全。
+- 專案、環境、CLI 命令與安全邊界：[`EquipmentLending\README.md`](EquipmentLending/README.md)
+- 快照、逐段流程、備案與實測限制：[`EquipmentLending\RUNBOOK.md`](EquipmentLending/RUNBOOK.md)
+
+## 歷史備案：Version Compatibility
+舊版本範圍檢查器保留於 [`VersionCompatibility\README.md`](VersionCompatibility/README.md)，其完整 prompts 為 [`VersionCompatibility\PROMPTS.md`](VersionCompatibility/PROMPTS.md)。它只判定 SemVer 範圍，不保證 API 相容或升級安全。
 
 # BMI Calculator Prompt
 ## Create a BMI Calculator

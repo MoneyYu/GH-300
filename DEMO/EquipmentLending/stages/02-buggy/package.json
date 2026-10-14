@@ -1,0 +1,6 @@
+{
+  "name": "equipment-lending-02-buggy",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/scenario.test.js" }
+}

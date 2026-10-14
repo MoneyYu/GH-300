@@ -16,10 +16,15 @@
 
 ## Demo prompt 素材
 
+### GH-300 主線：Equipment Lending
+
+[`DEMO\EquipmentLending\`](../DEMO/EquipmentLending/README.md) 是新的有狀態團隊設備借用主線，連結 Code Completion、Agent regression 修復、refactor、測試、SQLite、HTTP／原生網頁、真實瀏覽器與 read-only Skill。課前依其 [`README.md`](../DEMO/EquipmentLending/README.md)、[`PROMPTS.md`](../DEMO/EquipmentLending/PROMPTS.md) 與 [`RUNBOOK.md`](../DEMO/EquipmentLending/RUNBOOK.md) 排練；MCP、Skill 與 Inline Completion 的狀態以該專案的 `references\verification.md` 為準，不以 runner 成功代替 MCP 證據。
+
 | 檔案 | 用途 | 合適授課模組 |
 | --- | --- | --- |
+| `DEMO\EquipmentLending\` | 固定虛構設備借用／歸還、UTC deadline、本機 SQLite、loopback HTTP、原生 UI、獨立快照與瀏覽器驗收 | M2（Completion／Agent）、M3（端對端實作）、M4（測試） |
 | `DEMO\DEMO.md` | 歷史 Agent demo prompt 目錄：訂閱管理、股票價格、樂透集資、錯誤分析、YouTube 查詢、午餐、下午茶、機票與新聞輿情等情境 | M2（Chat / agent prompt）、M3（需求拆解與 SDLC） |
-| `DEMO\PROMPT.md` | BMI Calculator：建立、Clean Code 重構、安全問題盤點與單元測試；另有 WPF Async Downloader 的解釋、流程圖、README、視覺化 prompt | M2（prompt engineering）、M4（單元測試） |
+| `DEMO\PROMPT.md` | Equipment Lending 主線入口；BMI Calculator 與 WPF Async Downloader 提示保留為歷史素材 | M2（prompt engineering）、M4（單元測試） |
 | `DEMO\Context7 API Key 申請教學.md` | Context7 API key 與 MCP 設定的歷史教學 | M2／補充 MCP；先用目前官方文件重新查核步驟 |
 
 `DEMO\DEMO.md` 是 prompt 歷史目錄，而不是可直接建置的單一應用程式。不要把它當成實作起點。
@@ -85,12 +90,12 @@ python -m pytest tests\test_main.py -k test_add_numbers
 
 ## 建議 demo 流程
 
-1. **M1**：用 `PROMPT.md` 的 BMI 範例說明「先說出驗收條件，再請 Copilot 產生草稿」。
-2. **M2**：選一個 SalesReport 快照，對照 inline completion、Chat 與 agent 能取得的 context；讀取 diff，
+1. **M2**：用 Equipment Lending 的小函式對照 Inline Completion 與 Agent；接著先寫「借→還→再借」驗收，再觀察 regression。
+2. **M3**：選一個 SalesReport 快照或 Equipment Lending 的完整狀態流程，對照 Inline Completion、Chat 與 Agent；讀取 diff，
    不直接接受。
-3. **M3**：選 JavaScript 或 Python 主線，不要兩條都做完；透過 `DEMO.md` 的真實需求 prompt 示範拆解。
-4. **M4**：從 PrimeService 的 `2`、非質數、負數等例子，先由學員說出測試矩陣，再評估 Copilot 草稿。
-5. **補充（若有時間）**：使用 `M5BankAccount-Security` 談安全 review；只閱讀／討論，不變更快照。
+3. **M3**：用 Equipment Lending 展示共用 service、UTC／瀏覽器時區、DB 持久化與 UI；若環境未準備，直接使用獨立 `06-sqlite`／`07-web` 快照。
+4. **M4**：先用 Equipment Lending 或 PrimeService 讓學員說出邊界測試矩陣，再評估 Copilot 草稿；不要求修補歷史訓練快照。
+5. **歷史備案**：BMI prompt、VersionCompatibility、`M5BankAccount-Security` 均可作短補充；BMI 與舊版本檢查器不再作主線。
 
 ## 開課前檢查
 

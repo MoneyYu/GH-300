@@ -1,7 +1,16 @@
 
 # Agent Demo
-## 版本範圍檢查器（Version Compatibility）
-### GH-300 主線：Completion → 修 BUG → refactor → 測試 → Context7 → 網頁 → 瀏覽器驗證 → Skill
+
+## GH-300 主線：團隊設備借用系統（Equipment Lending）
+- 位置：`DEMO\EquipmentLending\`
+- 課堂目標：Code Completion → Agent 修 BUG → refactor → 測試 → 文件查詢 → SQLite → HTTP／網頁 → 瀏覽器驗證 → read-only Skill
+- 完整可複製 prompts：[`EquipmentLending\PROMPTS.md`](EquipmentLending/PROMPTS.md)（JavaScript P00–P11、語言中立 L00–L10）；索引見 [`PROMPT.md`](PROMPT.md)
+- 講師腳本與恢復點：[`EquipmentLending\RUNBOOK.md`](EquipmentLending/RUNBOOK.md)
+- 程式、環境、測試及資料安全說明：[`EquipmentLending\README.md`](EquipmentLending/README.md)
+- 本機 SQLite／原生網頁；不含登入、真實個資或雲端部署。MCP、Skill 與 Inline Completion 需分別取得實際驗證證據。
+
+## 歷史備案：版本範圍檢查器（Version Compatibility）
+### 舊版教學能力鏈（僅供歷史備案）
 - 位置：`DEMO\VersionCompatibility\`
 - 完整 Prompt：[`VersionCompatibility\PROMPTS.md`](VersionCompatibility/PROMPTS.md)（JavaScript 主線 P00–P11、語言中立 L00–L10）；入口索引見 [`PROMPT.md`](PROMPT.md)
 - 講師逐段腳本、快照恢復點（`stages\00-starter` … `stages\05-web`）、備案：[`VersionCompatibility\RUNBOOK.md`](VersionCompatibility/RUNBOOK.md)

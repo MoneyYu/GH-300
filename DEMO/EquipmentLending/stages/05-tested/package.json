@@ -1,0 +1,6 @@
+{
+  "name": "equipment-lending-05-tested",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/core.test.js tests/time.test.js tests/service.test.js" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "gh300-equipment-lending-demo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "test": "node --test tests/core.test.js tests/time.test.js tests/service.test.js tests/cli.test.js tests/server.test.js",
+    "test:browser": "playwright test --config=playwright.config.js"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "0.0.83",
+    "@playwright/test": "1.63.0"
+  }
+}
